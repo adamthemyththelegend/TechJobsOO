@@ -102,5 +102,12 @@ namespace TechJobs.Data
             return results.Single();
         }
 
+        public List<Job> Add(Job newJob)
+        {
+            Jobs.Add(newJob);
+
+            return Jobs;
+        }
+
     }
 }
