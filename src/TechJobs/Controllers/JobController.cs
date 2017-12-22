@@ -39,10 +39,10 @@ namespace TechJobs.Controllers
                 Job newJob = new Job
                 {
                     Name = newJobViewModel.Name,
-                    Employer = newJobViewModel.EmployerID,
-                    Location = newJobViewModel.LocationID,
-                    CoreCompetency = newJobViewModel.CoreCompetencyID,
-                    PositionType = newJobViewModel.PositionTypeID
+                    Employer = jobData.Employers.Find(newJobViewModel.EmployerID),
+                    Location = jobData.Locations.Find(newJobViewModel.LocationID),
+                    CoreCompetency = jobData.CoreCompetencies.Find(newJobViewModel.CoreCompetencyID),
+                    PositionType = jobData.PositionTypes.Find(newJobViewModel.PositionTypeID)
                 };
 
                 jobData.Add(newJob);
